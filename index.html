@@ -1,948 +1,967 @@
-/* ========== IMPORT FONT IMUT ========== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
-/* ========== BODY DENGAN TEMA IMUT ========== */
-body {
-    font-family: 'Quicksand', 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #e3f2fd 0%, #f8bbd0 50%, #e1bee7 100%);
-    background-attachment: fixed;
-    overflow-x: hidden;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-THICS</title>
 
-/* Pattern Bubble Background */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(255, 182, 193, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(179, 229, 252, 0.2) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: -1;
-}
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-/* ========== NAVBAR IMUT ========== */
-.navbar {
-    padding: 15px 0;
-    background: linear-gradient(90deg, #fce4ec 0%, #e1bee7 100%) !important;
-    backdrop-filter: blur(10px);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-}
-
-.navbar-brand {
-    font-family: 'Fredoka', sans-serif !important;
-    font-weight: 700 !important;
-    color: #d81b60 !important;
-    font-size: 1.8rem !important;
-}
-
-.nav-link {
-    font-weight: 600;
-    color: #6a1b9a !important;
-    margin-left: 10px;
-    transition: all 0.3s ease;
-}
-
-.nav-link.active, .nav-link:hover {
-    color: #d81b60 !important;
-    transform: translateY(-2px);
-}
-
-/* ========== WARNA SECTION IMUT ========== */
-section#definisi {
-    background: linear-gradient(135deg, #fff9c4 0%, #f8bbd0 100%) !important;
-}
-
-section#etika {
-    background: linear-gradient(135deg, #e1f5fe 0%, #f3e5f5 100%);
-}
-
-section#media-sosial {
-    background: linear-gradient(135deg, #ffebee 0%, #e8eaf6 100%);
-}
-
-section#etika-media {
-    background: linear-gradient(135deg, #f1f8e9 0%, #fce4ec 100%);
-}
-
-section#masalah {
-    background: linear-gradient(135deg, #e1bee7 0%, #b2ebf2 100%) !important;
-}
-
-section#dampak {
-    background: linear-gradient(135deg, #ffccbc 0%, #ffe082 100%) !important;
-}
-
-section#tips {
-    background: linear-gradient(135deg, #c5e1a5 0%, #80deea 100%);
-}
-
-section#team {
-    background: linear-gradient(135deg, #f8bbd0 0%, #e1bee7 100%) !important;
-}
-
-section#faq {
-    background: linear-gradient(135deg, #b3e5fc 0%, #ffccbc 100%);
-}
-
-/* Hero Section */
-.hero-section {
-    padding: 150px 0 100px 0; /* Jarak atas untuk kompensasi fixed navbar */
-    min-height: 100vh;
-    background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-/* ========== BUTTON IMUT ========== */
-.btn-primary {
-    background: linear-gradient(135deg, #f48fb1 0%, #ce93d8 100%) !important;
-    border: none !important;
-    border-radius: 25px !important;
-    padding: 12px 30px !important;
-    font-weight: 600 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    box-shadow: 0 4px 15px rgba(244, 143, 177, 0.4) !important;
-    transition: all 0.3s ease !important;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px) scale(1.05) !important;
-    box-shadow: 0 6px 20px rgba(244, 143, 177, 0.6) !important;
-}
-
-.btn-outline-secondary {
-    border: 2px solid #ce93d8 !important;
-    color: #ce93d8 !important;
-    border-radius: 25px !important;
-    padding: 12px 30px !important;
-    font-weight: 600 !important;
-    transition: all 0.3s ease !important;
-}
-
-.btn-outline-secondary:hover {
-    background: linear-gradient(135deg, #f48fb1 0%, #ce93d8 100%) !important;
-    color: white !important;
-    transform: translateY(-3px) !important;
-}
-
-/* ========== CARD & HEADING IMUT ========== */
-.service-card, .impact-card, .content-card {
-    border-radius: 25px !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px);
-    border: 3px solid rgba(255, 192, 203, 0.3) !important;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Fredoka', 'Quicksand', sans-serif !important;
-    color: #6a1b9a;
-}
-
-/* Line Accent Imut */
-.line {
-    width: 80px;
-    height: 5px;
-    background: linear-gradient(90deg, #f48fb1 0%, #ce93d8 100%);
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-/* Service Card Hover Effect */
-.service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; 
-}
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(145, 76, 76, 0.1) !important;
-}
-
-.service-card p {
-    flex-grow: 1; 
-}
-
-.service-card .btn {
-    width: 100%; 
-    max-width: 150px; 
-    text-align: center;
-    align-self: flex-start; 
-}
-
-/* Section General Styling */
-.section-padding {
-    padding: 80px 0;
-}
-.line {
-    width: 60px;
-    height: 4px;
-    background-color: #ff4081;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-/* Service Card Hover Effect */
-.service-card .btn {
-    width: auto; 
-    padding: 10px 20px;
-    align-self: center;
-}
-
-.service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-.icon-box {
-    margin-bottom: 20px;
-}
-
-/* ---  Styling Card IMPACT --- */
-.impact-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; 
-}
-.impact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(145, 76, 76, 0.1) !important;
-}
-
-.impact-card p {
-    flex-grow: 1; 
-}
-
-.impact-card .btn {
-    width: 100%; 
-    max-width: 150px; 
-    text-align: center;
-    align-self: flex-start; 
-}
-
-.impact-card .btn {
-    align-self: flex-start;
-    text-align:center;
-    max-width: 150px;
-}
-
-@media (max-width: 768px) {
-    .fw-bold.display-4 {
-        font-size: 2rem !important;
-        font-size: sans-serif ;
-    }
-}
-
-/* SECTION TIPS KUSTOM */
-#tips {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-.tip-wrapper {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    /* Memberi ruang di sisi untuk stiker */
-    padding: 0 50px; 
-}
-.tip-card {
-    background-color: #c8e6ff; 
-    border-radius: 20px;
-    padding: 25px 30px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    position: relative; 
-    margin: 30px 0; 
-    color: #333;
-    font-size: 1.1rem;
-}
-
-/* ------------------
-   Pseudo-Element Dasar untuk Ekor Balon
-   ------------------ */
-.tip-card::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 15px solid transparent; 
-}
+<body>
+  <!-- ========== GERBANG PEMBUKA IMUT ========== -->
+  <div id="loading-screen">
+    <div class="gate-container" id="gateContainer">
+      <!-- Gate Left -->
+      <div class="gate gate-left">
+        <div class="gate-decor flower1">🌸</div>
+        <div class="gate-decor star1">⭐</div>
+      </div>
+      
+      <!-- Gate Right -->
+      <div class="gate gate-right">
+        <div class="gate-decor flower2">🌺</div>
+        <div class="gate-decor star2">✨</div>
+      </div>
+      
+      <!-- Welcome Text -->
+      <div class="welcome-text">
+        Selamat Datang! 
+      </div>
+      
+    </div>
+      
+    
+    <!-- Confetti (akan di-generate via JavaScript) -->
+    <div id="confetti-container"></div>
+  </div>
+  <!-- ========== END GERBANG PEMBUKA ========== -->
 
 
-/* --- Tips 1: Kiri Atas ---*/
-.tip-1 {
-    max-width: 65%;
-    margin-left: 0;
-}
-.tip-1::after {
-    bottom: -10px; 
-    left: 10px;
-    border-top-color: #c8e6ff; 
-    border-bottom: 0;
-    transform: rotate(5deg);
-}
-
-/* --- Tips 2 --- */
-.tip-2 {
-    max-width: 70%;
-    margin-left: auto; 
-    margin-top: 50px;
-}
-.tip-2::after {
-    bottom: -10px; 
-    right: 100px; 
-    border-top-color: #c8e6ff; 
-    border-bottom: 0;
-    transform: rotate(-5deg);
-}
-
-/* --- Tips 3 --- */
-.tip-3 {
-    max-width: 90%;
-    margin-left: 0;
-    margin-top: 50px;
-}
-.tip-3::after {
-    bottom: -10px; 
-    left: 20px;
-    border-top-color: #c8e6ff; 
-    border-bottom: 0;
-    transform: rotate(5deg);
-}
-
-/* --- Tips 4 --- */
-.tip-4 {
-    max-width: 70%;
-    margin-left: auto; 
-    margin-top: 50px;
-}
-.tip-4::after {
-    bottom: -10px; 
-    right: 100px;
-    border-top-color: #c8e6ff; 
-    border-bottom: 0;
-    transform: rotate(-5deg);
-}
-
-/* --- Tips 5 --- */
-.tip-5 {
-    max-width: 90%;
-    margin-left: 0;
-    margin-top: 50px;
-}
-.tip-5::after {
-    bottom: -10px; 
-    left: 20px;
-    border-top-color: #c8e6ff; 
-    border-bottom: 0;
-    transform: rotate(5deg);
-}
-
-/* Responsive adjustments (untuk tampilan HP) */
-@media (max-width: 991px) {
-    .tip-card {
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        /* Hapus bentuk bubble agar rapi di HP */
-        clip-path: none;
-        border-radius: 15px;
-    }
-    .sticker {
-        display: none; /* Sembunyikan stiker di HP */
-    }
-    .tip-wrapper {
-        padding: 0 10px;
-    }
-}
-
-/* Project Overlay Effect */
-.project-item img {
-    transition: transform 0.5s ease;
-}
-.project-item:hover img {
-    transform: scale(1.1);
-}
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(48, 30, 212, 0.8); /* Biru transparan */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.project-item:hover .project-overlay {
-    opacity: 1;
-}
-
-/* Ethics Navigation Styling */
-.ethics-circle-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  padding: 5px;
-}
-
-.circle-outer {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 3px solid #ff4081;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.circle-inner {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-
-.ethics-label {
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.ethics-circle-btn:hover .circle-outer {
-  border-color: #f48fb1;
-  transform: scale(1.1);
-}
-
-.ethics-circle-btn:hover .circle-inner {
-  background-color: #f48fb1;
-}
-
-.ethics-circle-btn.active .circle-outer {
-  border-color: #f48fb1;
-  border-width: 4px;
-}
-
-.ethics-circle-btn.active .circle-inner {
-  background-color: #f48fb1;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
-.ethics-circle-btn.active .ethics-label {
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Content Styling */
-.ethics-content {
-  display: none;
-  animation: fadeIn 0.5s ease;
-}
-
-.ethics-content.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.content-card {
-  transition: transform 0.3s ease;
-}
-
-.content-card:hover {
-  transform: translateY(-5px);
-}
-
-.case-box {
-  border-left: 4px solid #0d6efd;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .ethics-nav {
-    flex-direction: column;
-  }
+  <!-- ========== ELEMEN DEKORATIF IMUT ========== -->
+  <!-- Floating Decorations -->
+  <div class="floating-decor" style="top: 10%; left: 5%;">🌸</div>
+  <div class="floating-decor" style="top: 20%; right: 8%; animation-delay: 1s;">🦋</div>
+  <div class="floating-decor" style="top: 40%; left: 10%; animation-delay: 2s;">✨</div>
+  <div class="floating-decor" style="top: 60%; right: 15%; animation-delay: 0.5s;">🌈</div>
+  <div class="floating-decor" style="bottom: 20%; left: 12%; animation-delay: 1.5s;">🎀</div>
+  <div class="floating-decor" style="bottom: 10%; right: 10%; animation-delay: 2.5s;">💫</div>
   
-  .circle-outer {
-    width: 50px;
-    height: 50px;
-  }
+  <!-- Bouncing Hearts -->
+  <div class="heart-bounce" style="top: 15%; left: 20%; animation-delay: 0.3s;">💖</div>
+  <div class="heart-bounce" style="top: 50%; right: 20%; animation-delay: 1s;">💕</div>
+  <div class="heart-bounce" style="bottom: 30%; left: 25%; animation-delay: 1.8s;">💝</div>
   
-  .circle-inner {
-    width: 35px;
-    height: 35px;
-  }
+  <!-- Rotating Stars -->
+  <div class="star-rotate" style="top: 30%; left: 15%;">⭐</div>
+  <div class="star-rotate" style="top: 70%; right: 12%; animation-delay: 2s;">🌟</div>
   
-  .ethics-label {
-    font-size: 13px;
-  }
-}
+  <!-- Cute Animals -->
+  <div class="animal-pulse" style="top: 25%; right: 5%; animation-delay: 1s;">🐰</div>
+  <div class="animal-pulse" style="bottom: 40%; left: 8%; animation-delay: 2s;">🐻</div>
+  <div class="animal-pulse" style="top: 55%; left: 3%; animation-delay: 0.5s;">🐱</div>
+  
+  <!-- Sparkles -->
+  <div class="sparkle" style="top: 12%; left: 30%; animation-delay: 0.5s;"></div>
+  <div class="sparkle" style="top: 45%; right: 25%; animation-delay: 1.5s;"></div>
+  <div class="sparkle" style="bottom: 25%; left: 35%; animation-delay: 2.5s;"></div>
+  <div class="sparkle" style="top: 80%; right: 40%; animation-delay: 0.8s;"></div>
+  
+  <!-- ========== END DEKORASI ========== -->
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4 text-primary" href="#">E-THICS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#definisi">Definisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#masalah">Masalah</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#dampak">Dampak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tips">Tips</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">About Us</a>
+          </li>
+        </ul>
+        <a href="quiz.html" class="btn btn-primary ms-lg-3">Quiz</a>
+      </div>
+    </div>
+  </nav>
 
-/* Accordion Customization */
-.accordion-button:not(.collapsed) {
-    background-color: #e7f1ff;
-    color: #0d6efd;
-}
-.accordion-button:focus {
-    box-shadow: none;
-    border-color: rgba(0,0,0,.125);
-}
-
-/* ========== FOOTER IMUT ========== */
-footer {
-    background: linear-gradient(135deg, #5e35b1 0%, #d81b60 100%) !important;
-}
-
-footer h4, footer h5 {
-    color: #fff !important;
-}
-/* Footer Links */
-.social-links a {
-    font-size: 18px;
-    transition: color 0.3s;
-}
-.social-links a:hover {
-    color: #ff4081 !important;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 991px) {
-    .hero-section {
-        text-align: center;
-        padding-top: 120px;
-    }
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-}
-
-/* Wrapper utama diperlebar */
-.tip-wrapper {
-    padding: 20px 0;
-    max-width: 1100px; /* Diperlebar dari 900px ke 1100px agar lebih memenuhi layar */
-    margin: 0 auto;
-}
-
-/* Style Dasar Kartu (Bubble Chat) diperbesar */
-.tip-card {
-    background-color: #e3f2fd; 
-    border-radius: 25px; /* Radius lebih bulat */
-    padding: 20px 35px; /* Padding diperbesar agar bubble terlihat "gendut" */
-    max-width: 85%; /* Lebar maksimal bubble ditambah dari 70% ke 85% */
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow sedikit lebih tebal */
-    font-size: 1.2rem; /* Ukuran font diperbesar agar lebih jelas dibaca */
-    line-height: 1.6; /* Jarak antar baris teks agar tidak terlalu rapat */
-}
-
-/* Gambar Karakter */
-.character-wrapper {
-    width: 180px; /* Gambar diperbesar sedikit agar proporsional dengan teks baru */
-    flex-shrink: 0; 
-}
-
-.character-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* --- Panah Bubble (Tetap sama, hanya penyesuaian sedikit) --- */
-.tip-card::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    bottom: 20px; /* Disesuaikan dengan padding baru */
-    border: 15px solid transparent; /* Panah sedikit diperbesar */
-}
-
-/* Kiri */
-.tip-card.tip-left { border-bottom-left-radius: 5px; }
-.tip-card.tip-left::after {
-    left: -25px; /* Geser panah lebih keluar */
-    border-right-color: #e3f2fd;
-    border-left: 0;
-}
-
-/* Kanan */
-.tip-card.tip-right {
-    background-color: #f8f9fa; /* Warna abu-abu muda untuk variasi (opsional) */
-    border-bottom-right-radius: 5px;
-}
-.tip-card.tip-right::after {
-    right: -25px; /* Geser panah lebih keluar */
-    border-left-color: #f8f9fa; /* Sesuaikan warna */
-    border-right: 0;
-}
-
-/* ===== STYLING TIM KAMI (MIRROR FRAME) ===== */
-.team-member {
-    transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-}
-
-.mirror-frame {
-    position: relative;
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 40px 40px 15px 15px; /* Melengkung di atas seperti cermin */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(135deg, #ffe3f3, #d6e6ff);
-    border: 3px solid #696969;
-}
-
-.mirror-frame img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.mirror-frame:hover img {
-    transform: scale(1.05);
-}
-
-.team-member h5 {
-    color: #333;
-    margin-top: 15px;
-}
-
-.team-member p {
-    font-size: 0.9rem;
-}
-
-/* ========================================
-   ELEMEN DEKORATIF IMUT
-   ======================================== */
-
-/* Floating Emojis & Decorations */
-.floating-decor {
-    position: absolute;
-    font-size: 2.5rem;
-    opacity: 0.6;
-    pointer-events: none;
-    z-index: 1;
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-20px) rotate(5deg);
-    }
-}
-
-/* Sparkles Animation */
-.sparkle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(circle, #fff 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 1;
-    animation: sparkle 3s ease-in-out infinite;
-}
-
-@keyframes sparkle {
-    0%, 100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Bouncing Hearts */
-.heart-bounce {
-    position: absolute;
-    font-size: 1.5rem;
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: 1;
-    animation: bounce 2s ease-in-out infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-}
-
-/* Rotating Stars */
-.star-rotate {
-    position: absolute;
-    font-size: 2rem;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 1;
-    animation: rotate 8s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Cute Animal Icons Pulse */
-.animal-pulse {
-    position: absolute;
-    font-size: 3rem;
-    opacity: 0.6;
-    pointer-events: none;
-    z-index: 1;
-    animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-}
-
-/* ========================================
-   GERBANG PEMBUKA IMUT
-   ======================================== */
-
-/* Loading Screen Container */
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #fce4ec 0%, #e1bee7 50%, #b3e5fc 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 1s ease;
-}
-
-#loading-screen.fade-out {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Gate Container */
-.gate-container {
-    position: relative;
-    width: 400px;
-    height: 500px;
-    perspective: 1000px;
-}
-
-/* Gate Halves (Kiri & Kanan) */
-.gate {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(135deg, #f48fb1 0%, #ce93d8 100%);
-    border: 5px solid #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    transition: transform 2s ease;
-}
-
-.gate-left {
-    left: 0;
-    transform-origin: left;
-    border-right: 3px solid #fff;
-}
-
-.gate-right {
-    right: 0;
-    transform-origin: right;
-    border-left: 3px solid #fff;
-}
-
-/* Gate Open Animation */
-.gate-container.open .gate-left {
-    transform: rotateY(-120deg);
-}
-
-.gate-container.open .gate-right {
-    transform: rotateY(120deg);
-}
-
-/* Gate Decorations */
-.gate-decor {
-    position: absolute;
-    font-size: 3rem;
-    animation: float 3s ease-in-out infinite;
-}
-
-.gate-decor.flower1 {
-    top: 10%;
-    left: 20%;
-}
-
-.gate-decor.flower2 {
-    top: 15%;
-    right: 20%;
-    animation-delay: 0.5s;
-}
-
-.gate-decor.star1 {
-    top: 40%;
-    left: 15%;
-    animation-delay: 1s;
-}
-
-.gate-decor.star2 {
-    top: 45%;
-    right: 15%;
-    animation-delay: 1.5s;
-}
-
-.gate-decor.heart {
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation-delay: 0.8s;
-}
-
-/* Welcome Text */
-.welcome-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Fredoka', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #d81b60;
-    text-align: center;
-    opacity: 0;
-    animation: fadeInWelcome 1s ease 2s forwards;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-}
-
-@keyframes fadeInWelcome {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.5);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes fadeInSubtitle {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -30%); /* ← Dari posisi lebih atas */
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%); /* ← Ke posisi center sempurna */
-    }
-}
-
-/* Confetti Animation */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #f48fb1;
-    opacity: 0;
-    animation: confettiFall 3s ease-out forwards;
-}
-
-@keyframes confettiFall {
-    0% {
-        opacity: 1;
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(600px) rotate(720deg);
-    }
-}
-
-/* Responsive untuk HP */
-@media (max-width: 768px) {
-    .gate-container {
-        width: 300px;
-        height: 400px;
-    }
+  <section id="home" class="hero-section align-items-center">
+  <div class="container">
+    <div class="floating-decor" style="top: 10%; left: 80%; font-size: 4rem; animation-delay: 0.5s;">🎨</div>
+    <div class="floating-decor" style="top: 70%; left: 5%; font-size: 3.5rem; animation-delay: 1.5s;">📱</div>
+    <div class="heart-bounce" style="top: 50%; left: 85%; font-size: 2.5rem; animation-delay: 1s;">💗</div>
     
-    .welcome-text {
-        font-size: 2rem;
+    <div class="row align-items-center">
+
+      <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+        <h1 class="display-4 fw-bold lh-base">
+          Mindful clicks,<span class="text-primary"><br />Share wisely</span>
+        </h1>
+        <p class="lead text-muted my-4">
+          Yuk, jadi pengguna media sosial yang cerdas! Pahami etika digital agar 
+  interaksimu di dunia maya tetap sopan, aman, dan bermanfaat.
+        </p>
+        
+      </div> 
+      <div class="col-lg-6 text-center">
+      <div class="ratio ratio-16x9 rounded-3 shadow">
+          <iframe class="embed-responsive-item"
+                  src="https://www.youtube.com/embed/UwY5DIePPhA" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+          </div>
+        </div>
+      </div> 
+    </div> 
+  </div> 
+</section>
+
+
+  <section id="definisi" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Definisi</h2>
+        <p class="text-muted">Hubungan antara etika digital dan media sosial</p>
+        <div class="line mx-auto"></div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card p-4 bg-white shadow-sm rounded d-flex flex-column h-100">
+            <div class="icon-box mb-3 text-primary text-start">
+              <i class="fas fa-laptop-code fa-3x"></i>
+            </div>
+            <h4 class="mb-3">Etika Digital</h4>
+            <p class="text-muted flex-grow-1">
+              Seperangkat prinsip dan nilai yang mengatur perilaku individu dalam menggunakan teknologi digital dan internet.
+            </p>
+            <a class="btn btn-primary" href="#etika">Lebih lanjut ></a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card p-4 bg-white shadow-sm rounded d-flex flex-column h-100">
+            <div class="icon-box mb-3 text-primary text-start">
+              <i class="fas fa-mobile-alt fa-3x"></i>
+            </div>
+            <h4 class="mb-3">Media Sosial</h4>
+            <p class="text-muted flex-grow-1">
+              Platform digital yang memfasilitasi penggunanya untuk melakukan
+              aktivitas sosial, berinteraksi, dan membagikan berbagai konten
+              informasi seperti foto dan video secara terbuka setiap saat.
+            </p>
+            <a class="btn btn-primary" href="#media-sosial">Lebih lanjut ></a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+
+          <div class="service-card p-4 bg-white shadow-sm rounded d-flex flex-column h-100">
+            <div class="icon-box mb-3 text-primary text-start">
+              <i class="fas fa-chart-line fa-3x"></i>
+            </div>
+            <h4 class="mb-3">Etika Bermedia Sosial</h4>
+            <p class="text-muted flex-grow-1">
+              Norma atau aturan perilaku pengguna untuk berinteraksi secara
+              sopan, jujur, dan bertanggung jawab demi menciptakan lingkungan
+              digital yang aman dan nyaman.
+            </p>
+            <a class="btn btn-primary" href="#etika-media">Lebih lanjut ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="etika" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="etika.jpg" alt="About Us" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+          <h2 class="fw-bold mb-2">Etika Digital</h2>
+          <p class="lead text-muted">
+            Secara bahasa, kata <b>etika</b> lahir dari bahasa Yunani <i>ethos</i> yang artinya tampak dari suatu
+            kebiasaan.
+          </p>
+          <p class="text-muted mb-2" style="text-align: justify;">
+            Etika digital mencakup berbagai aspek, mulai dari cara berkomunikasi, berbagi informasi, mengunggah konten, hingga perlindungan data pribadi. Etika digital bukan hanya aturan dalam menggunakan internet, tetapi juga cerminan karakter dan tanggung jawab pengguna teknologi. Tanpa etika, ruang digital bisa menjadi tempat yang penuh konflik, penyebaran hoaks, dan pelanggaran privasi.
+            <br>
+          <p class="text-muted mb-2">Contoh penerapan etika digital :</p>
+          <ul class="text-muted mb-2 ">
+            <li>Menghargai privasi orang lain.</li>
+            <li>Berkomunikasi dengan sopan.</li>
+            <li>Bertanggung jawab dalam menyebarkan informasi.</li>
+            <li>Menjaga keamanan data pribadi.</li>
+            <li>Menghindari plagiarisme.</li>
+            <li>Tidak melakukan cyberbullying.</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="media-sosial" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 ps-lg">
+          <h2 class="fw-bold mb-2">Media Sosial</h2>
+          <p class="lead text-muted">
+            Menurut KBBI, media sosial merupakan laman atau aplikasi yang memungkinkan pengguna dapat membuat dan
+            berbagi isi atau terlibat dalam jaringan sosial.
+          </p>
+          <p class="text-muted mb-2" style="text-align: justify;">
+            Di zaman sekarang, tidak dapat diragukan lagi bahwa kehidupan manusia saat ini sangat berhubungan dengan
+            media sosial. Media sosial memegang peranan penting di hampir segala lini masyarakat. Mulai dari mengirim
+            pesan kepada teman, berbagi informasi, hingga mencari suatu informasi yang sedang hangat di masyarakat.
+            <br><br>
+            Dalam media sosial, pengguna dapat membuat profil, berbagi teks, gambar, suara, dan video, serta terhubung
+            dengan orang lain melalui jejaring sosial daring. Contoh platform media sosial yang populer adalah WhatsApp,
+            Facebook, Instagram, TikTok, X (Twitter), dan YouTube.
+          </p>
+        </div>
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="media-sosial-fix.jpg" alt="About Us" class="img-fluid rounded shadow" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="etika-media" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="etika-media-fix.jpeg" alt="About Us" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+          <h2 class="fw-bold mb-4">Etika Bermedia Sosial</h2>
+          <p class="lead text-muted">
+            Etika bermedia sosial juga berkaitan erat dengan kesadaran digital atau <b>digital literacy</b>.
+          </p>
+          <p class="text-muted mb-4" style="text-align: justify;">
+            Etika bermedia sosial adalah panduan moral yang mengatur cara kita berinteraksi di dunia digital agar tetap
+            bertanggung jawab atas setiap kebebasan berekspresi yang kita miliki. Sebelum mengunggah apa pun, pengguna
+            wajib memikirkan dampaknya secara matang, karena setiap aktivitas kita di dalam media sosial akan meninggalkan jejak digital yang
+            dapat memengaruhi citra diri sendiri maupun orang lain.
+            <br><br>
+            Penerapannya mencakup penggunaan bahasa yang santun, tidak menyebarkan berita palsu, dan
+            menjaga privasi dengan tidak mengumbar data pribadi atau foto orang lain tanpa izin. Dengan memiliki etika digital dan menghindari konten provokatif, kita dapat menjadikan media sosial sebagai
+            ruang yang aman dan positif untuk berbagi manfaat, bukan tempat untuk menyebarkan kebencian.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="masalah" class="section-padding bg-light">
+    <div class="container" id="masalah">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Masalah di Media Sosial</h2>
+        <p class="text-muted">Masalah-masalah yang timbul jika tidak ada etika dalam bermedia sosial</p>
+        <div class="line mx-auto"></div>
+      </div>
+
+      <!-- Navigation Circles -->
+      <div class="ethics-nav-wrapper mb-5">
+        <div
+          class="bg-light ethics-nav d-flex justify-content-center align-items-center flex-wrap gap-4 p-2 rounded-pill mx-auto"
+          style="max-width: 700px;">
+          <button class="ethics-circle-btn active" data-target="hoax">
+            <div class="circle-outer">
+              <div class="circle-inner"></div>
+            </div>
+            <span class="ethics-label text-primary">Hoax</span>
+          </button>
+          <button class="ethics-circle-btn" data-target="oversharing">
+            <div class="circle-outer">
+              <div class="circle-inner"></div>
+            </div>
+            <span class="ethics-label text-primary">Oversharing</span>
+          </button>
+          <button class="ethics-circle-btn" data-target="faker">
+            <div class="circle-outer">
+              <div class="circle-inner"></div>
+            </div>
+            <span class="ethics-label text-primary">Cyberbullying </span>
+          </button>
+          <button class="ethics-circle-btn" data-target="doxing">
+            <div class="circle-outer">
+              <div class="circle-inner"></div>
+            </div>
+            <span class="ethics-label text-primary">Doxing</span>
+          </button>
+          <button class="ethics-circle-btn" data-target="hate-speech">
+            <div class="circle-outer">
+              <div class="circle-inner"></div>
+            </div>
+            <span class="ethics-label text-primary">Hate speech</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Content Cards -->
+      <div class="ethics-content-wrapper">
+        <!-- Hoax Content -->
+        <div class="ethics-content active" id="hoax">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <div class="content-card p-5 bg-white rounded shadow">
+                <h3 class="fw-bold mb-4 text-primary">Pengertian Hoax</h3>
+                <p class="text-muted mb-4" style="text-align: justify;">
+                  Menurut ahli komunikasi dari Universitas Indonesia, Profesor Muhammad Alwi Dahlan, hoax adalah manipulasi berita yang sengaja dilakukan untuk memberikan pengakuan atau pemahaman yang salah. Di dalam berita hoaks terdapat penyelewengan fakta yang bertujuan menarik perhatian.
+                </p>
+                <h4 class="fw-bold mb-3" style="font-size: 1.1rem;">Contoh Kasus:</h4>
+                <div class="case-box p-3 bg-light rounded">
+                  <p class="text-muted mb-0" style="text-align: justify;">
+                    Isu Kiamat 2012 adalah hoax yang dipicu oleh perkiraan terhadap berakhirnya siklus kalender Suku
+                    Maya, yang diklaim menandai akhir dunia pada 21 Desember 2012. Faktanya, NASA dan para ilmuwan
+                    menegaskan bahwa klaim tersebut tidak memiliki dasar ilmiah, dan tanggal itu pun berlalu tanpa
+                    terjadi bencana alam semesta seperti yang diramalkan.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="hoaks.jpg" alt="hoax" class="img-fluid rounded shadow" style="width: 90%;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Oversharing Content -->
+        <div class="ethics-content" id="oversharing">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <img src="oversharing.jpg" alt="Oversharing" class="img-fluid rounded shadow" />
+            </div>
+            <div class="col-lg-6">
+              <div class="content-card p-5 bg-white rounded shadow">
+                <h3 class="fw-bold mb-4 text-primary">Pengertian Oversharing</h3>
+                <p class="text-muted mb-4" style="text-align: justify;">
+                  Menurut dosen psikologi Universitas Airlangga (Unair), Tiara Diah Sosialita MPsi Psikolog menjelaskan, oversharing adalah kondisi ketika seseorang tidak bisa membatasi diri sendiri dalam membagikan informasi pribadinya kepada publik. Informasi pribadi tersebut dapat berupa pencapaian, kekayaan, kesedihan, bahkan aib.
+                </p>
+                <h4 class="fw-bold mb-3" style="font-size: 1.1rem;">Contoh Kasus:</h4>
+                <div class="case-box p-3 bg-light rounded">
+                  <p class="text-muted mb-0" style="text-align: justify;">
+                    Pada tahun 2019, seorang lulusan UI menjadi bulan-bulanan publik setelah mengunggah status media
+                    sosial yang meremehkan tawaran gaji 8 juta rupiah karena merasa standar almamaternya jauh di atas kampus
+                    lain. Unggahan yang dinilai arogan tersebut menjadi bumerang yang merusak reputasi profesional
+                    pengunggahnya dan menciptakan stigma negatif di mata para perekrut kerja.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faker Content -->
+        <div class="ethics-content" id="faker">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <div class="content-card p-5 bg-white rounded shadow">
+                <h3 class="fw-bold mb-4 text-primary">Pengertian Cyberbullying</h3>
+                <p class="text-muted mb-4" style="text-align: justify;">
+                  <i>Cyberbullying</i> (perundungan dunia maya) adalah perundungan dengan menggunakan teknologi digital. Hal ini dapat terjadi di media sosial, video game, dan teknologi digital lainnya. <i>Cyberbullying</i> merupakan perilaku berulang yang ditujukan untuk menakuti, membuat marah, atau mempermalukan mereka yang menjadi sasaran.
+                </p>
+                <h4 class="fw-bold mb-3" style="font-size: 1.1rem;">Contoh Kasus:</h4>
+                <div class="case-box p-3 bg-light rounded">
+                  <p class="text-muted mb-0" style="text-align: justify;">
+                    Kasus kematian Sulli (Choi Jin-ri) pada Oktober 2019 menjadi tragedi kelam yang membuka mata dunia akan dampak fatal <i>cyberbullying</i>, Sulli menjadi sasaran <i>cyberbullying</i> yang intens selama bertahun-tahun karena sikap terbukanya yang dianggap melanggar norma konservatif idola K-Pop. Tekanan mental yang tak tertahankan akibat komentar jahat tersebut akhirnya mendorongnya untuk mengakhiri hidup di apartemennya.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="cyber.jpg" alt="Cyberbullying Illustration" class="img-fluid rounded shadow" style="width: 80%;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Doxing Content -->
+        <div class="ethics-content" id="doxing">
+          <div class="row align-items-center">
+            <div class="col-lg -6 mb-4 mb-lg-0">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="doxing.jpg" alt="Doxing" class="img-fluid rounded shadow" style="width: 85%;" />
+            </div>
+            <div class="col-lg-6">
+              <div class="content-card p-5 bg-white rounded shadow">
+                <h3 class="fw-bold mb-4 text-primary">Pengertian Doxing</h3>
+                <p class="text-muted mb-4" style="text-align: justify;">
+                  Diambil dari <i>Cambridge Dictionary</i>, doxing adalah tindakan menemukan atau menerbitkan informasi pribadi seseorang di internet tanpa izin mereka, terutama dengan cara yang mengungkapkan nama, alamat, dan lain-lain. Hal tersebut bertujuan mengancam, mempermalukan, atau membahayakan korban.
+                </p>
+                <h4 class="fw-bold mb-3" style="font-size: 1.1rem;">Contoh Kasus:</h4>
+                <div class="case-box p-3 bg-light rounded">
+                  <p class="text-muted mb-0" style="text-align: justify;">
+                    Pada tahun 2022, YouTuber <b>IShowSpeed</b> mengalami insiden <i>swatting</i> ketika alamat rumahnya
+                    yang bocor disalahgunakan oleh orang tak bertanggung jawab untuk melaporkan ancaman palsu ke
+                    kepolisian. Kejadian ini berujung pada penyergapan oleh aparat bersenjata lengkap yang memborgolnya
+                    saat sedang siaran langsung, mempertontonkan bahaya nyata dari kebocoran data pribadi kepada ribuan
+                    penontonnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hate Speech Content -->
+        <div class="ethics-content" id="hate-speech">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <div class="content-card p-5 bg-white rounded shadow">
+                <h3 class="fw-bold mb-4 text-primary">Pengertian Hate Speech</h3>
+                <p class="text-muted mb-4" style="text-align: justify;">
+                  Hate speech atau ujaran kebencian adalah komunikasi yang mengandung kebencian, diskriminasi, atau
+                  kekerasan terhadap individu atau kelompok berdasarkan ras, agama, etnis, gender, atau karakteristik
+                  lainnya. Di media sosial, hate speech dapat menyebar cepat dan memicu konflik.
+                </p>
+                <h4 class="fw-bold mb-3" style="font-size: 1.1rem;">Contoh Kasus:</h4>
+                <div class="case-box p-3 bg-light rounded">
+                  <p class="text-muted mb-0" style="text-align: justify;">
+                    Sekelompok siswi SMP di Jakarta menuai kecaman nasional setelah video mereka viral saat melontarkan
+                    candaan tak pantas yang menyamakan makanan cepat saji dengan darah dan tulang korban anak-anak di
+                    Palestina. Aksi nirempati tersebut memaksa pihak sekolah dan Dinas Pendidikan turun tangan
+                    memberikan sanksi pembinaan serta mewajibkan para siswa tersebut melakukan permohonan maaf secara
+                    terbuka kepada publik.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="hate.jpg" alt="Hate Speech" class="img-fluid rounded shadow" style="width: 80%;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT CONTENT -->
+  <section id="dampak" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-4">Dampak Negatif</h2>
+        <p class="text-muted">Dampak negatif tidak beretika dalam bermedia sosial </p>
+        <div class="line mx-auto"></div>
+      </div>
+
+      <div class="row justify-content-center g-4 mb-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card impact-card p-3 h-100 shadow-sm border-0">
+            <div>
+              <p class="fw-bold mb-4 text-primary">1. Sanksi Hukum dan Reputasi Buruk</p>
+              <p style="text-align: justify;">
+                Risiko dijerat UU Nomor 11 Tahun 2008 tentang ITE (misalnya karena pencemaran nama baik atau ujaran kebencian) dan rusaknya reputasi pribadi yang sulit diperbaiki di dunia nyata maupun dunia maya.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card impact-card p-3 h-100 shadow-sm border-0">
+            <div>
+              <p class="fw-bold mb-4 text-primary">2. Kehilangan Pekerjaan/Peluang Karir</p>
+              <p style="text-align: justify;">
+                Banyak perusahaan yang melacak jejak digital pelamar atau karyawan. Perilaku tidak etis dapat
+                menyebabkan pemutusan hubungan kerja atau hilangnya kesempatan direkrut.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card impact-card p-3 h-100 shadow-sm border-0">
+            <div>
+              <p class="fw-bold mb-4 text-primary">3. Merusak Hubungan Dunia Nyata</p>
+              <p style="text-align: justify;">
+                Perilaku buruk di dunia maya, seperti sindiran atau komentar kasar, sering kali memicu konflik emosional yang terbawa hingga ke interaksi sehari-hari sehingga dapat menghancurkan hubungan keluarga dan persahabatan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-6 col-md-8">
+          <div class="card impact-card p-4 h-100 shadow-sm border-0">
+            <div>
+              <p class="fw-bold mb-4 text-primary">4. Kehilangan Kepercayaan dan Isolasi Sosial</p>
+              <p style="text-align: justify;">
+                Perilaku tidak etis seperti menyebarkan hoax, memanipulasi informasi, <i>cyberbullying</i>, ataupun <i>hate speech</i>
+                dapat menyebabkan kehilangan kepercayaan dari orang-orang baik dunia nyata maupun dunia maya. Hal ini bisa
+                berujung pada isolasi sosial di mana orang lain enggan berinteraksi atau memercayai informasi yang Anda bagikan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-8">
+          <div class="card impact-card p-4 h-100 shadow-sm border-0">
+            <div>
+              <p class="fw-bold mb-4 text-primary">5. Gangguan Kesehatan Fisik dan Mental</p>
+              <p style="text-align: justify;">
+                Terlibat dalam perilaku tidak etis, seperti menjadi pelaku perundungan, atau sebaliknya, menjadi target
+                perundungan akibat unggahan atau komentar yang melanggar etika, dapat menimbulkan tekanan psikologis.
+                Hal ini berpotensi menyebabkan stres, kecemasan, depresi, dan rendah diri, yang berdampak
+                negatif pada kesehatan fisik dan mental secara keseluruhan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </div>
+  </div>
+  </section>
+
+  <section id="tips" class="section-padding">
+    <div class="container">
+      <div class="animal-pulse" style="top: 5%; right: 5%; font-size: 4rem;">🐼</div>
+      <div class="floating-decor" style="top: 15%; left: 3%; font-size: 3rem; animation-delay: 1s;">💡</div>
+      <div class="star-rotate" style="bottom: 10%; right: 10%; font-size: 2.5rem; animation-delay: 1.5s;">✨</div>
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Tips</h2>
+        <p class="text-muted">Tips Dalam Bermedia Sosial</p>
+        <div class="line mx-auto"></div>
+      </div>
+
+      <div class="tip-wrapper">
+
+        <div class="tip-item d-flex align-items-end mb-4 justify-content-start">
+          <div class="character-wrapper me-4"> <img src="tips1.png" alt="Tips1" class="img-fluid character-img">
+          </div>
+          <div class="tip-card tip-left">
+            <p class="mb-0">
+              1. <strong>Cek kebenaran informasi.</strong> Jangan langsung percaya dan menyebarkan berita ataupun
+              informasi yang didapat dari media sosial. Selalu lakukan verifikasi informasi seperti mencari berita tersebut di Google.
+            </p>
+          </div>
+        </div>
+
+        <div class="tip-item d-flex justify-content-end mb-4">
+          <div class="tip-card tip-right">
+            <p class="mb-0">
+              2. <strong>Menggunakan bahasa yang sopan.</strong> Gunakan bahasa yang sopan dan santun ketika berinteraksi di media sosial dan hindarkan konten bersifat ujaran kebencian, <i>cyberbullying</i>, <i>hate speech</i>, atau konten SARA.
+            </p>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="character-wrapper me-4"> <img src="tips2.png" alt="Tips2" class="img-fluid character-img">
+          </div>
+        </div>
+
+        <div class="tip-item d-flex justify-content-start mb-4 ps-lg-5 ps-0">
+          <div class="character-wrapper me-4"> <img src="tips3.png" alt="Tips3" class="img-fluid character-img">
+          </div>
+          <div class="tip-card tip-left ms-lg-5 ms-0">
+            <p class="mb-0">
+              3. <strong>Membatasi dan melindungi informasi pribadi</strong> dari khalayak publik. Kontrol diri Anda agar tidak menyebarkan data sensitif yang dapat disalahgunakan oleh pihak yang tidak bertanggung jawab
+            </p>
+          </div>
+        </div>
+
+        <div class="tip-item d-flex justify-content-end mb-4">
+          <div class="tip-card tip-right">
+            <p class="mb-0">
+              4. <strong>Saring konten Anda.</strong> Hindari konten yang tidak bermanfaat atau bersifat negatif dan perbanyak melihat dan
+              mengunggah konten positif. Contohnya konten edukatif, konten inspiratif, konten agama, dan lain-lain.
+            </p>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="character-wrapper me-4"> <img src="tips4.png" alt="Tips4" class="img-fluid character-img">
+          </div>
+        </div>
+
+        <div class="tip-item d-flex justify-content-start mb-4 ps-lg-5 ps-0">
+          <div class="character-wrapper me-4"> <img src="tips5.png" alt="Tips5" class="img-fluid character-img">
+          </div>
+          <div class="tip-card tip-left ms-lg-5 ms-0">
+            <p class="mb-0">
+              5. <strong>Kelola waktu Anda dalam bermedia sosial.</strong> Hal tersebut bertujuan untuk tidak menyia-nyiakan waktu Anda menanggapi konten yang tiada habisnya, tidak kecanduan, dan menjaga Anda untuk tetap produktif.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">About Us</h2>
+        <p class="text-muted">Anggota Kelompok 1 PTI</p>
+        <div class="line mx-auto"></div>
+      </div>
+      <div class="row g-4 justify-content-center mb-4">
+        <!-- Anggota 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="david.png" class="img-fluid" alt="Anggota 1" />
+            </div>
+            <h5 class="mt-3 fw-bold">David Morgan Neuron</h5>
+            <p class="text-muted">(251402048)</p>
+          </div>
+        </div>
+        
+        <!-- Anggota 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="hannan.png" class="img-fluid" alt="Anggota 2" />
+            </div>
+            <h5 class="mt-3 fw-bold">Hannan Rava Mahardika</h5>
+            <p class="text-muted">(251402006)</p>
+          </div>
+        </div>
+        
+        <!-- Anggota 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="faiza.png" class="img-fluid" alt="Anggota 3" />
+            </div>
+            <h5 class="mt-3 fw-bold">Muhammad Faiza Elfaz</h5>
+            <p class="text-muted">(251402097)</p>
+          </div>
+        </div>
+        
+        <!-- Anggota 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="naydila.png" class="img-fluid" alt="Anggota 4" />
+            </div>
+            <h5 class="mt-3 fw-bold">Naydila Chairunisa Rambe</h5>
+            <p class="text-muted">(251402045)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Baris Kedua -->
+      <div class="row g-4 justify-content-center">
+        <!-- Anggota 5 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="zerlina.png" class="img-fluid" alt="Anggota 5" />
+            </div>
+            <h5 class="mt-3 fw-bold">Zerlina Adelide Aqila</h5>
+            <p class="text-muted">(251402106)</p>
+          </div>
+        </div>
+        
+        <!-- Anggota 6 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="qeizha.png" class="img-fluid" alt="Anggota 6" />
+            </div>
+            <h5 class="mt-3 fw-bold">Qeizha Aleesha Zyva</h5>
+            <p class="text-muted">(251402054)</p>
+          </div>
+        </div>
+        
+        <!-- Anggota 7 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="ratu.png" class="img-fluid" alt="Anggota 7" />
+            </div>
+            <h5 class="mt-3 fw-bold">Ratu Sabrina Turnip</h5>
+            <p class="text-muted">(251402018)</p>
+          </div>
+        </div>
+        
+        <!-- Anggota 8 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member text-center">
+            <div class="mirror-frame">
+              <img src="nayla.png" class="img-fluid" alt="Anggota 8" />
+            </div>
+            <h5 class="mt-3 fw-bold">Nayla Talisa Salsabila</h5>
+            <p class="text-muted">(251402144)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Pertanyaan Yang Sering Ditanyakan</h2>
+        <p class="text-muted">Temukan Jawaban Atas Pertanyaan Umum</p>
+        <div class="line mx-auto"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item mb-3 border shadow-sm rounded">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  Apa yang dimaksud dengan Etika Bermedia Sosial?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body text-muted">
+                  Panduan perilaku yang bertanggung jawab dan sopan saat berinteraksi di platform digital.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3 border shadow-sm rounded">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Apa saja konsekuensi yang mungkin dihadapi jika seseorang melanggar etika serius?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body text-muted">
+                  Pelanggar dapat sanksi sosial, kerusakan reputasi, dan hukuman pidana sesuai UU ITE.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3 border shadow-sm rounded">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Bagaimana cara melindungi privasi diri sendiri saat berinteraksi media sosial?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body text-muted">
+                  Batasi oversharing informasi pribadi dan hati-hati saat menerima permintaan pertemanan dari orang
+                  asing.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h4 class="fw-bold mb-3">
+            <span class="text-primary">E-THICS</span>
+          </h4>
+          <p class="text-white-50">
+            Etika digital dalam media sosial. Kelompok 1 PTI
+          </p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">Tautan</h5>
+          <ul class="list-unstyled text-white-50">
+            <li>
+              <a href="#home" class="text-decoration-none text-white-50">Beranda</a>
+            </li>
+            <li>
+              <a href="#definisi" class="text-decoration-none text-white-50">Definisi</a>
+            </li>
+            <li>
+              <a href="#masalah" class="text-decoration-none text-white-50">Masalah</a>
+            </li>
+            <li>
+              <a href="#dampak" class="text-decoration-none text-white-50">Dampak</a>
+            <li>
+              <a href="#tips" class="text-decoration-none text-white-50">Tips</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">Contact Info</h5>
+          <ul class="list-unstyled text-white-50">
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Jl. Dr. T. Mansyur No. 9, Medan,<br>Kota Medan, Sumatera Utara
+            </li>
+            <li><i class="fas fa-phone me-2"></i> +62 61 8211633</li>
+            <li><i class="fas fa-envelope me-2"></i> www.usu.ac.id</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">Follow Us</h5>
+          <div class="social-links">
+            <a href="https://www.instagram.com/official.usu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              class="text-white me-3"><i class="fab fa-instagram">@official.usu</i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="text-white-50" />
+      <div class="text-center text-white-50">
+        <p class="mb-0">&copy; 2025 E-THICS. Kelompok 1 PTI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Interactive Ethics Categories
+    document.addEventListener('DOMContentLoaded', function () {
+      const circleButtons = document.querySelectorAll('.ethics-circle-btn');
+      const contentSections = document.querySelectorAll('.ethics-content');
+
+      circleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const targetId = this.getAttribute('data-target');
+
+          // Remove active class from all buttons
+          circleButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Add active class to clicked button
+          this.classList.add('active');
+
+          // Hide all content sections
+          contentSections.forEach(section => section.classList.remove('active'));
+
+          // Show target content section
+          document.getElementById(targetId).classList.add('active');
+
+          // Smooth scroll to content
+          document.querySelector('.ethics-content-wrapper').scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          });
+        });
+      });
+    });
+  </script>
+
+  <!-- Audio yang akan diputar -->
+<audio id="bg-music" loop>
+    <source src="MUSIK.weba" type="audio/mp3">
+</audio>
+
+<!-- Tombol manual (jika user ingin play/pause) -->
+<button id="music-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; padding: 10px 15px; border-radius: 10px; background:#fff; border:1px solid #ccc;">
+    🔊 Musik: OFF
+</button>
+
+  <script>
+const music = document.getElementById("bg-music");
+const btn = document.getElementById("music-btn");
+let userInteracted = false;
+
+// --- 1) Coba AUTOPLAY saat halaman dibuka ---
+document.addEventListener("DOMContentLoaded", () => {
+    music.volume = 0.6; // Volume default (0–1)
+
+    const playAttempt = music.play();
+    if (playAttempt !== undefined) {
+        playAttempt.then(() => {
+            btn.textContent = "🔊 Musik: ON";
+        }).catch(() => {
+            // Browser blokir autoplay → tunggu interaksi
+            btn.textContent = "🔇 Musik: OFF";
+        });
     }
-    
-    .gate-decor {
-        font-size: 2rem;
+});
+
+
+// --- 2) Jika autoplay diblokir, musik mulai setelah 1x interaksi (klik / scroll / touch) ---
+function startMusicOnInteraction() {
+    if (!userInteracted) {
+        music.play();
+        btn.textContent = "🔊 Musik: ON";
+        userInteracted = true;
+
+        // Stop mendengarkan event setelah musik aktif
+        window.removeEventListener("click", startMusicOnInteraction);
+        window.removeEventListener("scroll", startMusicOnInteraction);
+        window.removeEventListener("touchstart", startMusicOnInteraction);
     }
 }
 
-/* Responsive untuk layar kecil */
-@media (max-width: 768px) {
-    .mirror-frame {
-        max-width: 220px;
-    }
-    
-    .mirror-frame img {
-        height: 280px;
-    }
-}
+window.addEventListener("click", startMusicOnInteraction);
+window.addEventListener("scroll", startMusicOnInteraction);
+window.addEventListener("touchstart", startMusicOnInteraction);
 
-/* --- RESPONSIVE (Tampilan HP) --- */
-@media (max-width: 768px) {
-    .character-wrapper {
-        width: 100px; /* Perkecil gambar di HP */
+
+// --- 3) Tombol manual untuk ON/OFF musik ---
+btn.addEventListener("click", () => {
+    if (music.paused) {
+        music.play();
+        btn.textContent = "🔊 Musik: ON";
+    } else {
+        music.pause();
+        btn.textContent = "🔇 Musik: OFF";
     }
-    
-    .tip-card {
-        max-width: 85%; /* Bubble lebih lebar di HP */
-        font-size: 0.9rem;
+});
+</script>
+
+  <!-- ========== SCRIPT GERBANG PEMBUKA ========== -->
+  <script>
+    // Fungsi untuk membuat confetti
+    function createConfetti() {
+      const container = document.getElementById('confetti-container');
+      const colors = ['#f48fb1', '#ce93d8', '#81c784', '#ffb74d', '#64b5f6'];
+      
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.top = Math.random() * 20 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        container.appendChild(confetti);
+      }
     }
-}
+
+    // Animasi pembukaan gerbang
+    window.addEventListener('load', function() {
+      const loadingScreen = document.getElementById('loading-screen');
+      const gateContainer = document.getElementById('gateContainer');
+      
+      // Tunggu 1 detik, lalu buka gerbang
+      setTimeout(function() {
+        gateContainer.classList.add('open');
+        createConfetti(); // Trigger confetti
+      }, 1000);
+      
+      // Tunggu 3.5 detik, lalu hilangkan loading screen
+      setTimeout(function() {
+        loadingScreen.classList.add('fade-out');
+        
+        // Hapus loading screen dari DOM setelah animasi selesai
+        setTimeout(function() {
+          loadingScreen.style.display = 'none';
+        }, 1000);
+      }, 3500);
+    });
+  </script>
+  <!-- ========== END SCRIPT GERBANG ========== -->
+
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
